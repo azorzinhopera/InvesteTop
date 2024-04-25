@@ -1,5 +1,5 @@
 """
-URL configuration for setup project.
+URL configuration for conteudo project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.0/topics/http/urls/
@@ -15,14 +15,13 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include
-from conteudo.conteudo.views import index, carteira, informacao, melhores
+from django.urls import path
+from static import img
+from conteudo.conteudo.views import index, carteira
+
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', index),
-    path('carteira/', carteira, name='carteira'),
-    path('informacao/', informacao, name='informacao'),
-    path('melhores/', melhores, name='melhores')
-    # path('', include('conteudo.urls'))
+    # path('admin/', admin.site.urls),
+    path('', index), 
+    path('carteira/', carteira),
 ]
